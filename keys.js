@@ -1,4 +1,4 @@
-console.log('File Initialized');
+console.log('File Initialized!\nLoading....');
 
 module.exports.spotify = {
     id: process.env.SPOTIFY_ID,
