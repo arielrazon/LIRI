@@ -48,15 +48,17 @@ else if (userCommand == "spotify-this-song") {
             }
             //if something is returned:
             else if (data) {
+                //ACE OF BASE
                 //if no results:
                 if (data.tracks.total == 0) {
-                    //console log Ace of Bass message
-                    console.log("Song Info" + "\n" + "____________________" + "\n\n" + "Unfortunately your song isn't listed! So we gave you Ace of Bass" + "\n\n")
+                    //console log Ace of Base message
+                    console.log("Unfortunately your song isn't listed! So we gave you Ace of Bass" + "\n" + "____________________" + "\n\n")
                     //then do a new search
                     spotify.search({
                         type: 'track',
-                        query: 'the+sign+ace+of+base'
+                        query: 'the sign ace of base'
                     },
+
                         function (err, data) {
                             //if error:
                             if (err) {
@@ -64,14 +66,15 @@ else if (userCommand == "spotify-this-song") {
                             }
                             //if new data, play ace of bass - with vars
                             if (data) {
-                                console.log(data)
+
                                 var items = data.tracks.items
-                                console.log(items[0])
+
                                 var songName = items[0].name
                                 var artist = items[0].artists[0].name
                                 var album = items[0].album.name
                                 var previewLink = items[0].preview_url
-                                console.log(artist)
+
+
                                 console.log("The Song's name is: " + songName + "\n\n" + "This is the album that the song is from: " + album + "\n\n" + "Here is a preview link of the song: \n" + previewLink + "\n")
                             }
                         })
@@ -79,9 +82,9 @@ else if (userCommand == "spotify-this-song") {
 
                 }
                 else if (data.tracks.total > 0) {
-                    console.log(data)
+
                     var items = data.tracks.items
-                    console.log(items[0])
+
                     var songName = items[0].name
                     var artist = items[0].artists[0].name
                     var album = items[0].album.name
