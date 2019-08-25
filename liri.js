@@ -75,7 +75,7 @@ else if (userCommand == "spotify-this-song") {
                                 var previewLink = items[0].preview_url
 
 
-                                console.log("The Song's name is: " + songName + "\n\n" + "This is the album that the song is from: " + album + "\n\n" + "Here is a preview link of the song: \n" + previewLink + "\n")
+                                console.log("The Song's name is: " + songName + "\n\n" + "The album that the song is from is: " + album + "\n\n" + "Here is a preview link of the song: \n" + previewLink + "\n")
                             }
                         })
 
@@ -90,14 +90,33 @@ else if (userCommand == "spotify-this-song") {
                     var album = items[0].album.name
                     var previewLink = items[0].preview_url
                     console.log(artist)
-                    console.log("Song Info" + "\n" + "____________________" + "\n\n" + "The Artist of this Song is: " + artist + "\n\n" + "The Song's name is: " + songName + "\n\n" + "This is the album that the song is from: " + album + "\n\n" + "Here is a preview link of the song: \n" + previewLink + "\n")
+                    console.log("Song Info" + "\n" + "____________________" + "\n\n" + "The Artist of this Song is: " + artist + "\n\n" + "The Song's name is: " + songName + "\n\n" + "The album that the song is from is: " + album + "\n\n" + "Here is a preview link of the song: \n" + previewLink + "\n")
 
                 }
             }
         });
 }
 else if (userCommand == "movie-this") {
-
+    axios({
+        method: 'get',
+        url: 'http://www.omdbapi.com/?apikey=trilogy&t=' + searchTerm
+    }).then(function (response) {
+        var data = response.data;
+        //country, language, plot, actors
+        var title = data.Title;
+        var year = data.Year;
+        var plot = data.Plot;
+        var actors = data.Actors;
+        var language = data.Language;
+        var country = data.Country;
+        var ratings = data.Ratings
+        console.log("Movie Info" + "\n" + "____________________" + "\n\n" + "The Title of this Film is: \n" + title + "\n\n" + "The Film was released in the year: \n" + year + "\n\n" + "The Film was rated as follows:\n")
+        for (i = 0; i < ratings.length; i++) {
+            console.log("   " + ratings[i].Source + " rated it " + ratings[i].Value + "\n")
+        }
+        console.log("The Film was produced in: \n" + country + "\n\n" + "The Film is available in the following languages: \n" + language + "\n\n" + "The Film had the following actors: \n" + actors + "\n\n" + "Plot summary: \n" + plot)
+        
+    })
 }
 else if (userCommand == "do-what-it-says") {
 
