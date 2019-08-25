@@ -1,14 +1,18 @@
 //current to-do:
-//fix MOMENT JS - figure out how to format the time
-//
+//get spotify api integration to work
+//get omdb integration to work
+//do-what-it-says
+//create a nice readme.md file
 
 require("dotenv").config();
 var moment = require("moment");
 var keys = require("./keys.js");
-//var spotify = new Spotify(keys.spotify);
+var Spotify = require('node-spotify-api')
+var spotify = new Spotify(keys.spotify);
+
 var fs = require("fs")
 var userCommand = process.argv[2]
-var searchTerm = process.argv.splice(3).join("")
+var searchTerm = process.argv.splice(3).join("+")
 var axios = require("axios")
 
 if (userCommand == "log") {
@@ -32,6 +36,16 @@ else if (userCommand == "concert-this") {
 }
 else if (userCommand == "spotify-this-song") {
 
+    spotify.search({
+        type: 'track',
+        query: searchTerm
+    },
+        function (err, data) {
+            if (err) {
+                return console.log('Error occured: ' + err);
+            }
+            else { console.log(data) }
+        });
 }
 else if (userCommand == "movie-this") {
 
