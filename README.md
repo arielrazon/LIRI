@@ -17,7 +17,8 @@ Created at the UMiami Coding Bootcamp. The challenge was to use Node JS to creat
 - Run command 'node liri.js' or one of the commands below.
 
 ## Functionality Video
-
+* click on image below for youtube video showcasing functionality. thanks for watching!
+[![click here for youtube video](http://img.youtube.com/vi/66GtiBy-CPI/0.jpg)](http://www.youtube.com/watch?v=66GtiBy-CPI "LIRI")
 
 ## What Each Command Does
 
