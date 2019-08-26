@@ -71,3 +71,6 @@ Created at the UMiami Coding Bootcamp. The challenge was to use Node JS to creat
 ## Built With
 
 * Visual Studio Code
+
+## Authors
+**Ariel Razon** [Ariel Razon](https://www.github.com/happyliltrees)
