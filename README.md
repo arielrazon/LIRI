@@ -1,6 +1,6 @@
-# liri-node-app
+# LIRI
 
-Created at the UMiami Coding Bootcamp. The challenge was to use Node JS to create a LIRI bot, like iPhone's SIRI, but takes in command through Language vs Speech. LIRI is a command line node app that takes in parameters and returns data based on one of four commands:
+The challenge for this project was to use Node JS to create a LIRI bot, like iPhone's SIRI. This version, however, takes in commands through the command line, instead of verbal commands. LIRI then takes in parameters and returns data based on one of four commands:
 
   * `concert-this`
 
