@@ -57,16 +57,16 @@ The challenge for this project was to use Node JS to create a LIRI bot, like iPh
   * Takes the text from random.txt and runs the song through spotify-this-song command
 
 ## Tech used
-- Node.js
-- Dotenv NPM Package - https://www.npmjs.com/package/dotenv
-- MomentJS NPM Package - https://www.npmjs.com/package/moment
-- Axios NPM Package - https://www.npmjs.com/package/axios
-- Spotify NPM Package - https://www.npmjs.com/package/node-spotify-api
-- Request NPM Package - https://www.npmjs.com/package/request
+- [Node.js](https://nodejs.org/en/)
+- [Dotenv NPM Package](https://www.npmjs.com/package/dotenv)
+- [MomentJS NPM Package](https://www.npmjs.com/package/moment)
+- [Axios NPM Package](https://www.npmjs.com/package/axios)
+- [Spotify NPM Package](https://www.npmjs.com/package/node-spotify-api)
+- [Request NPM Package](https://www.npmjs.com/package/request)
 
 ## Prerequisites
 ```
-- Node.js - Download the latest version of Node https://nodejs.org/en/
+- Node.js [Download the latest version of Node](https://nodejs.org/en/)
 ```
 
 ## Built With
