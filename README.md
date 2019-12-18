@@ -66,9 +66,9 @@ The challenge for this project was to use Node JS to create a LIRI bot, like iPh
 
 ## Prerequisites
 ```
-- Node.js [Download the latest version of Node](https://nodejs.org/en/)
+- Node.js 
 ```
-
+[Download the latest version of Node](https://nodejs.org/en/)
 ## Built With
 
 * Visual Studio Code
